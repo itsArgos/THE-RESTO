@@ -81,9 +81,9 @@
                     <li>Other</li>
                 </ul>
             </div>
-
+            
             <div class="discover-bottom">
-                <div class="modal">
+                <div class="modal-meals">
                     <div class="meals">
                         <div class="meals-content">
                             <img src="./img/dish-item-01.jpg" alt="">
@@ -92,61 +92,60 @@
                                 <p>Mushroom / Garlic / Veggies</p>
                             </div>
                             <div class="price">$12</div>
-                            <div class="test"></div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-02.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>fried potatoes with garlic</h4>
+                                <p>Potatoes / Olive Oil / Garlic</p>
                             </div>
                             <div class="price">$22</div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-03.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>tenu roast source</h4>
+                                <p>Tuna / Potatoes / Rice</p>
                             </div>
                             <div class="price">$15</div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-04.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>roast pork (4 sticks)</h4>
+                                <p>Pork / Veggies / Shoyu</p>
                             </div>
                             <div class="price">$18</div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-05.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>salted fried chicken</h4>
+                                <p>Chicken / Olive Oil / Salt</p>
                             </div>
                             <div class="price">$20</div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-06.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>crab with curry sources</h4>
+                                <p>Crab / Potatoes / Rice</p>
                             </div>
                             <div class="price">$14</div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-07.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>imported slamon steak</h4>
+                                <p>Salmon / Veggies / Oil</p>
                             </div>
                             <div class="price">$16</div>
                         </div>
                         <div class="meals-content">
                             <img src="./img/dish-item-08.jpg" alt="">
                             <div>
-                                <h4>italian source mushroom</h4>
-                                <p>Mushroom / Garlic / Veggies</p>
+                                <h4>baked potato pizza</h4>
+                                <p>Potato / Bread / Cheese</p>
                             </div>
                             <div class="price">$25</div>
                         </div>
@@ -154,6 +153,55 @@
                 </div>
             </div>
         </section>
-    </main>
-</body>
-</html>
+        
+        <section class="reservation">
+            <div class="modal-reservation">
+                <div class="left-content">
+                    <div class="content">
+                        <p>Time</p>
+                        <h2>open</h2>
+                        <i class="fa-solid fa-utensils"></i>
+                        <div class="date-reservation">
+                            <h3>monday - friday</h3>
+                            <p>7AM - 11AM (Breakfast)</p>
+                            <p>11AM - 10PM (Lunch/Dinner)</p>
+                        </div>
+                        <div class="date-reservation">
+                            <h3>saturday / sunday</h3>
+                            <p>8AM - 1PM (Brunch)</p>
+                            <p>1PM - 9PM (Lunch/Dinner)</p>
+                        </div>
+                        <p class="phone-number">+15 890 979 25 52</p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="content">
+                        <p>Reservation</p>
+                        <h2>online booking</h2>
+                        <i class="fa-solid fa-utensils"></i>
+                        <form>
+                            <div class="form-content">
+                                    <select name="People" id="select-option">
+                                        <option value="">People</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                <input type="date" value="2024-04-15" />
+                                <input type="time" name="appt-time" value="13:30" />
+                                <input type="text" id="name" placeholder="Name"/>
+                                <input type="text" id="number" placeholder="Phone"/>
+                                <input type="text" id="email" placeholder="Email"/>
+                            </div>
+                            <button type="submit">book now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                
+            </section>
+        </main>
+    </body>
+    </html>

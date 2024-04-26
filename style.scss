@@ -1,8 +1,16 @@
 // ******* GLOBAL SETTINGS ******
+$orange-color : rgb(197, 127, 41);
+$grey-color : rgb(148, 148, 148);
+$main-bg-color: rgb(41, 41, 41);
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
+    background: $main-bg-color;
 }
 
 h1,h2,h3,h4,p {
@@ -13,12 +21,15 @@ ul{
     list-style: none;
 }
 
+// input, label, select {
+//     border: none;
+//     outline: none;
+// }
+
 $font-allura : "Allura";
 $font-poppins : "Poppins";
 $font-roboto : "Roboto";
 
-$orange-color : rgb(197, 127, 41);
-$grey-color : rgb(148, 148, 148);
 
 
 // ******** HEADER ********
@@ -126,7 +137,7 @@ header {
         i {
             font-size: 1.5em;
             margin: 50px;
-            color: rgb(148, 148, 148);
+            color: $grey-color;
         }
         
         p:nth-child(4) {
@@ -149,7 +160,7 @@ header {
             text-transform: uppercase;
             font-family: $font-poppins;
             letter-spacing: -1px;
-            color: rgb(148, 148, 148);
+            color: $grey-color;
             margin-top: -5px;
         }
     }
@@ -161,15 +172,18 @@ header {
     }
 }
 
+
+// ********* DISCOVER *********
+
 .discover-container {
     position: relative;
-
+    
     .discover-top {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 70px 0 200px 0;
-        background: rgb(41, 41, 41);
+        background: $main-bg-color;
         
         h2 {
             font-family: $font-allura;
@@ -179,8 +193,8 @@ header {
         
         i {
             font-size: 1.5em;
-            margin: 50px;
-            color: rgb(148, 148, 148);
+            margin: 30px;
+            color: $grey-color;
         }
         
         ul {
@@ -199,7 +213,6 @@ header {
                 bottom: -10px;
                 left: 0;
                 width: 100%;
-                border: 1px solid $grey-color;
                 border-radius: 5%;
             }
         }
@@ -208,20 +221,20 @@ header {
     .discover-bottom {
         background: url(./img/bg-menu-01.jpg) center/cover;
         height: 750px;
-
-        .modal {
-            content: "";
+        
+        .modal-meals {
             position: absolute;
             z-index: 1000;
-            top: 350px;
-            left: 500px;
+            top: 56%;
+            left: 50%;
             width: 900px;
+            transform: translate(-50%,-50%);
             background-color: white;
-
+            
             .meals {
                 display: grid;
                 grid-template-columns: 1fr 1fr ;
-
+                
                 .meals-content {
                     position: relative;
                     display: flex;
@@ -229,24 +242,23 @@ header {
                     gap: 10px;
                     font-family: $font-roboto;
                     margin: 45px;
-
+                    
                     img {
                         border-radius: 50%;
                     }
-
+                    
                     h4 {
                         text-transform: uppercase;
+                        font-size: 0.8em;
+                        margin-bottom: 5px;
                     }
-
-                    p {
-                        width: 70%;
-                    }
-
+                    
                     .price {
                         display: flex;
                         align-items: center;
-                        margin-left: 30px;
-
+                        margin-left: 20px;
+                        color: $orange-color;
+                        
                         &::after {
                             content: "";
                             position: absolute;
@@ -256,6 +268,118 @@ header {
                             border: 1px dashed $grey-color;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+// ************ RESERVATION **********
+
+.reservation {
+    position: relative;
+    
+    .modal-reservation {
+        position: absolute;
+        z-index: 1000;
+        top: 420px;
+        left: 50%;
+        width: 1500px;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        display: flex;
+        
+        .left-content {
+            text-align: center;
+            background: black;
+            padding: 30px;
+            width: 40%;
+            
+            .content {
+                padding: 30px 40px;
+                border: 1px dashed $grey-color;
+                color: white;
+            }
+            
+            .date-reservation {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            
+            p {
+                font-family: $font-roboto;
+            }
+            
+            p:nth-child(1), h3, .phone-number{
+                color: $orange-color;
+                font-family: $font-roboto;
+            }
+            
+            p:nth-child(1) {
+                font-family: $font-allura;
+                font-size: 3em;
+            }
+            
+            h2 {
+                text-transform: uppercase;
+                margin-top: -18px;
+                font-family: $font-poppins;
+            }
+            
+            i {
+                margin: 30px;
+                color: $grey-color;
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                text-transform: uppercase;
+                margin: 20px 0 20px 0;
+            }
+            .phone-number {
+                margin-top: 45px;
+                font-family: $font-poppins;
+                font-size: 1.2em;
+            }
+        }
+        
+        .right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            
+            .content {
+                text-align: center;
+                padding: 30px 0;
+                
+                p:nth-child(1) {
+                    color: $orange-color;
+                    font-family: $font-allura;
+                    font-size: 3em;
+                }
+                
+                h2 {
+                    margin-top: -20px;
+                    text-transform: uppercase;
+                    font-family: $font-poppins;
+                    font-size: 2em;
+                }
+                
+                i {
+                    color: $grey-color;
+                    font-size: 1.2em;
+                    margin: 30px;
+                }
+            }
+            
+            form {
+
+                .form-content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-bottom: 30px;
                 }
             }
         }

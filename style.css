@@ -1,6 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: rgb(41, 41, 41);
 }
 
 h1, h2, h3, h4, p {
@@ -173,7 +179,7 @@ header .header-link ul {
 }
 .discover-container .discover-top i {
   font-size: 1.5em;
-  margin: 50px;
+  margin: 30px;
   color: rgb(148, 148, 148);
 }
 .discover-container .discover-top ul {
@@ -193,27 +199,27 @@ header .header-link ul {
   bottom: -10px;
   left: 0;
   width: 100%;
-  border: 1px solid rgb(148, 148, 148);
   border-radius: 5%;
 }
 .discover-container .discover-bottom {
   background: url(./img/bg-menu-01.jpg) center/cover;
   height: 750px;
 }
-.discover-container .discover-bottom .modal {
-  content: "";
+.discover-container .discover-bottom .modal-meals {
   position: absolute;
   z-index: 1000;
-  top: 350px;
-  left: 500px;
+  top: 56%;
+  left: 50%;
   width: 900px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: white;
 }
-.discover-container .discover-bottom .modal .meals {
+.discover-container .discover-bottom .modal-meals .meals {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.discover-container .discover-bottom .modal .meals .meals-content {
+.discover-container .discover-bottom .modal-meals .meals .meals-content {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,29 +231,134 @@ header .header-link ul {
   font-family: "Roboto";
   margin: 45px;
 }
-.discover-container .discover-bottom .modal .meals .meals-content img {
+.discover-container .discover-bottom .modal-meals .meals .meals-content img {
   border-radius: 50%;
 }
-.discover-container .discover-bottom .modal .meals .meals-content h4 {
+.discover-container .discover-bottom .modal-meals .meals .meals-content h4 {
   text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 5px;
 }
-.discover-container .discover-bottom .modal .meals .meals-content p {
-  width: 70%;
-}
-.discover-container .discover-bottom .modal .meals .meals-content .price {
+.discover-container .discover-bottom .modal-meals .meals .meals-content .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 30px;
+  margin-left: 20px;
+  color: rgb(197, 127, 41);
 }
-.discover-container .discover-bottom .modal .meals .meals-content .price::after {
+.discover-container .discover-bottom .modal-meals .meals .meals-content .price::after {
   content: "";
   position: absolute;
   left: 5px;
   bottom: -30px;
   width: 95%;
   border: 1px dashed rgb(148, 148, 148);
+}
+
+.reservation {
+  position: relative;
+}
+.reservation .modal-reservation {
+  position: absolute;
+  z-index: 1000;
+  top: 420px;
+  left: 50%;
+  width: 1500px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.reservation .modal-reservation .left-content {
+  text-align: center;
+  background: black;
+  padding: 30px;
+  width: 40%;
+}
+.reservation .modal-reservation .left-content .content {
+  padding: 30px 40px;
+  border: 1px dashed rgb(148, 148, 148);
+  color: white;
+}
+.reservation .modal-reservation .left-content .date-reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+.reservation .modal-reservation .left-content p {
+  font-family: "Roboto";
+}
+.reservation .modal-reservation .left-content p:nth-child(1), .reservation .modal-reservation .left-content h3, .reservation .modal-reservation .left-content .phone-number {
+  color: rgb(197, 127, 41);
+  font-family: "Roboto";
+}
+.reservation .modal-reservation .left-content p:nth-child(1) {
+  font-family: "Allura";
+  font-size: 3em;
+}
+.reservation .modal-reservation .left-content h2 {
+  text-transform: uppercase;
+  margin-top: -18px;
+  font-family: "Poppins";
+}
+.reservation .modal-reservation .left-content i {
+  margin: 30px;
+  color: rgb(148, 148, 148);
+  font-size: 1.5em;
+}
+.reservation .modal-reservation .left-content h3 {
+  text-transform: uppercase;
+  margin: 20px 0 20px 0;
+}
+.reservation .modal-reservation .left-content .phone-number {
+  margin-top: 45px;
+  font-family: "Poppins";
+  font-size: 1.2em;
+}
+.reservation .modal-reservation .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+.reservation .modal-reservation .right-content .content {
+  text-align: center;
+  padding: 30px 0;
+}
+.reservation .modal-reservation .right-content .content p:nth-child(1) {
+  color: rgb(197, 127, 41);
+  font-family: "Allura";
+  font-size: 3em;
+}
+.reservation .modal-reservation .right-content .content h2 {
+  margin-top: -20px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 2em;
+}
+.reservation .modal-reservation .right-content .content i {
+  color: rgb(148, 148, 148);
+  font-size: 1.2em;
+  margin: 30px;
+}
+.reservation .modal-reservation .right-content form .form-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */
