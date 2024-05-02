@@ -17,6 +17,11 @@ ul {
   list-style: none;
 }
 
+.pre-title {
+  font-family: "Allura";
+  color: rgb(197, 127, 41);
+}
+
 header {
   background: url(./img/bg-slider-06.jpg) center/cover;
   width: 100%;
@@ -68,9 +73,7 @@ header .header-link ul {
   color: white;
   padding-top: 150px;
 }
-.hero-content p:nth-child(1) {
-  font-family: "Allura";
-  color: rgb(197, 127, 41);
+.hero-content .pre-title {
   font-size: 3.5em;
 }
 .hero-content h2 {
@@ -113,9 +116,7 @@ header .header-link ul {
           align-items: center;
   padding: 30px;
 }
-.our-store .our-store-left-content p:nth-child(1) {
-  font-family: "Allura";
-  color: rgb(197, 127, 41);
+.our-store .our-store-left-content .pre-title {
   font-size: 2.5em;
 }
 .our-store .our-store-left-content h2 {
@@ -207,13 +208,10 @@ header .header-link ul {
 }
 .discover-container .discover-bottom .modal-meals {
   position: absolute;
-  z-index: 1000;
-  top: 56%;
-  left: 50%;
-  width: 900px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: white;
+  top: 25%;
+  left: 27%;
+  width: 50%;
+  background-color: rgb(233, 233, 233);
 }
 .discover-container .discover-bottom .modal-meals .meals {
   display: grid;
@@ -259,20 +257,15 @@ header .header-link ul {
 }
 
 .reservation {
-  position: relative;
+  margin-top: 80px;
 }
 .reservation .modal-reservation {
-  position: absolute;
-  z-index: 1000;
-  top: 420px;
-  left: 50%;
-  width: 1500px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(233, 233, 233);
 }
 .reservation .modal-reservation .left-content {
   text-align: center;
@@ -298,13 +291,13 @@ header .header-link ul {
 .reservation .modal-reservation .left-content p {
   font-family: "Roboto";
 }
-.reservation .modal-reservation .left-content p:nth-child(1), .reservation .modal-reservation .left-content h3, .reservation .modal-reservation .left-content .phone-number {
-  color: rgb(197, 127, 41);
-  font-family: "Roboto";
-}
-.reservation .modal-reservation .left-content p:nth-child(1) {
+.reservation .modal-reservation .left-content .pre-title {
   font-family: "Allura";
   font-size: 3em;
+}
+.reservation .modal-reservation .left-content h3, .reservation .modal-reservation .left-content .phone-number {
+  color: rgb(197, 127, 41);
+  font-family: "Roboto";
 }
 .reservation .modal-reservation .left-content h2 {
   text-transform: uppercase;
@@ -355,10 +348,125 @@ header .header-link ul {
 .reservation .modal-reservation .right-content .content i {
   color: rgb(148, 148, 148);
   font-size: 1.2em;
-  margin: 30px;
+  margin: 50px;
 }
 .reservation .modal-reservation .right-content form .form-content {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+.reservation .modal-reservation .right-content form .form-content input, .reservation .modal-reservation .right-content form .form-content select, .reservation .modal-reservation .right-content form .form-content #select-option {
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid rgb(148, 148, 148);
+  padding: 20px 0;
+}
+.reservation .modal-reservation .right-content form button {
+  background: rgb(41, 41, 41);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.upcoming {
+  border: 1px solid wheat;
+  margin: 120px auto;
+  width: 80%;
+}
+.upcoming .upcoming-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.upcoming .upcoming-title .pre-title {
+  font-size: 2.5em;
+}
+.upcoming .upcoming-title h2 {
+  text-transform: uppercase;
+  font-family: "Poppins";
+  color: white;
+  font-size: 2em;
+  margin-top: -15px;
+}
+.upcoming .upcoming-title i {
+  color: rgb(148, 148, 148);
+  margin: 30px;
+  font-size: 1.5em;
+}
+.upcoming .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.upcoming .grid-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 150px;
+}
+.upcoming .grid-container button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  padding-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.upcoming .grid-container .text {
+  background: white;
+  width: 100%;
+  padding: 20px 20px 50px 20px;
+}
+.upcoming .grid-container .left-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.upcoming .grid-container .left-container h3, .upcoming .grid-container .left-container p {
+  font-family: "Roboto";
+  padding: 10px;
+}
+.upcoming .grid-container .left-container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.upcoming .grid-container .right-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(./img/event-03.jpg) center/cover;
+}
+.upcoming .grid-container .right-container .text {
+  background: white;
 }/*# sourceMappingURL=style.css.map */
