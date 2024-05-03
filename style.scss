@@ -20,7 +20,7 @@ body {
     background: $main-bg-color;
 }
 
-h1,h2,h3,h4,p {
+h1,h2,h3,h4,h5,p {
     margin: 0;
 }
 
@@ -278,7 +278,7 @@ header {
     .modal-reservation {
         display: flex;
         margin: auto;
-        width: 80%;
+        width: 70%;
         background-color: $grey-bg-color;
         
         .left-content {
@@ -405,9 +405,8 @@ header {
 // *********** UPCOMING ***********
 
 .upcoming {
-    border: 1px solid wheat;
     margin: 120px auto;
-    width: 80%;
+    width: 70%;
     
     .upcoming-title {
         display: flex;
@@ -439,53 +438,128 @@ header {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         
-        img {
-            object-fit: cover;
-            width: 150px;
-        }
-
         button {
             border: none;
             background: none;
             text-transform: uppercase;
-            padding-left: 10px;
-            margin-top: 10px;
             cursor: pointer;
+            padding: 0;
         }
 
-        .text {
-            background: white;
-            width: 100%;
-            padding: 20px 20px 50px 20px;
+        .fa-clock {
+            padding-left: 10px;
         }
         
-        .left-container {
+        .left-container{
             display: flex;
             flex-direction: column;
             gap: 20px;
             
-            h3, p {
-                font-family: $font-roboto;
-                padding: 10px;
-            }
-
             .content {
-                display: flex;
+                display: grid;
+                grid-template-columns: 40% 60%;
+                
+                .image-container {
+                    position: relative;
+                    
+                    &::after {
+                        content: "08 July";
+                        position: absolute;
+                        top: 25%;
+                        left: 33%;
+                        width: 100px;
+                        height: 100px;
+                        background: $main-bg-color;
+                        color: white;
+                        z-index: 1000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: $font-poppins;
+                        font-size: 1.2em;
+                    }
+                    
+                    img {
+                        object-fit: center/cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    background: white;
+                    width: 100%;
+                    height: 100%;
+                    
+                    h3, p {
+                        font-family: $font-roboto;
+                    }
+                    
+                    h3 {
+                        margin-left: 30px;
+                    }
+                    
+                    p {
+                        padding: 20px 0;
+                        color: $grey-color;
+                    }
+                    
+                    p, button {
+                        margin-left: 20px;
+                    }
+                }
             }
         }
-
+        
         .right-container {
             display: flex;
             justify-content: center;
             align-items: center;
             background: url(./img/event-03.jpg) center/cover;
-
+            
             .content {
-            }
-
-            .text {
+                text-align: center;
                 background: white;
+                height: 90%;
+                width: 90%;
+                
+                .date-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: auto;
+                    margin-bottom: 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: white;
+                    background: $main-bg-color;
+                    font-family: $font-poppins;
+                    
+                    h5 {
+                        font-size: 1.2em;
+                    }
+                }
+                
+                h3, p {
+                    font-family: $font-roboto;
+                }
+                
+                h3 {
+                    margin: auto;
+                    width: 40%;
+                    
+                }
+                
+                p {
+                    padding: 20px 0 70px 0;
+                    color: $grey-color;
+                }
             }
+            
         }
     }
 }

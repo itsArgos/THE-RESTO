@@ -9,7 +9,7 @@ body {
   background: rgb(41, 41, 41);
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
@@ -264,7 +264,7 @@ header .header-link ul {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  width: 80%;
+  width: 70%;
   background-color: rgb(233, 233, 233);
 }
 .reservation .modal-reservation .left-content {
@@ -379,9 +379,8 @@ header .header-link ul {
 }
 
 .upcoming {
-  border: 1px solid wheat;
   margin: 120px auto;
-  width: 80%;
+  width: 70%;
 }
 .upcoming .upcoming-title {
   display: -webkit-box;
@@ -418,23 +417,15 @@ header .header-link ul {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.upcoming .grid-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 150px;
-}
 .upcoming .grid-container button {
   border: none;
   background: none;
   text-transform: uppercase;
-  padding-left: 10px;
-  margin-top: 10px;
   cursor: pointer;
+  padding: 0;
 }
-.upcoming .grid-container .text {
-  background: white;
-  width: 100%;
-  padding: 20px 20px 50px 20px;
+.upcoming .grid-container .fa-clock {
+  padding-left: 10px;
 }
 .upcoming .grid-container .left-container {
   display: -webkit-box;
@@ -446,14 +437,71 @@ header .header-link ul {
           flex-direction: column;
   gap: 20px;
 }
-.upcoming .grid-container .left-container h3, .upcoming .grid-container .left-container p {
-  font-family: "Roboto";
-  padding: 10px;
-}
 .upcoming .grid-container .left-container .content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.upcoming .grid-container .left-container .content .image-container {
+  position: relative;
+}
+.upcoming .grid-container .left-container .content .image-container::after {
+  content: "08 July";
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  width: 100px;
+  height: 100px;
+  background: rgb(41, 41, 41);
+  color: white;
+  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins";
+  font-size: 1.2em;
+}
+.upcoming .grid-container .left-container .content .image-container img {
+  -o-object-fit: center/cover;
+     object-fit: center/cover;
+  width: 100%;
+  height: 100%;
+}
+.upcoming .grid-container .left-container .content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+.upcoming .grid-container .left-container .content .text h3, .upcoming .grid-container .left-container .content .text p {
+  font-family: "Roboto";
+}
+.upcoming .grid-container .left-container .content .text h3 {
+  margin-left: 30px;
+}
+.upcoming .grid-container .left-container .content .text p {
+  padding: 20px 0;
+  color: rgb(148, 148, 148);
+}
+.upcoming .grid-container .left-container .content .text p, .upcoming .grid-container .left-container .content .text button {
+  margin-left: 20px;
 }
 .upcoming .grid-container .right-container {
   display: -webkit-box;
@@ -467,6 +515,42 @@ header .header-link ul {
           align-items: center;
   background: url(./img/event-03.jpg) center/cover;
 }
-.upcoming .grid-container .right-container .text {
+.upcoming .grid-container .right-container .content {
+  text-align: center;
   background: white;
+  height: 90%;
+  width: 90%;
+}
+.upcoming .grid-container .right-container .content .date-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  background: rgb(41, 41, 41);
+  font-family: "Poppins";
+}
+.upcoming .grid-container .right-container .content .date-content h5 {
+  font-size: 1.2em;
+}
+.upcoming .grid-container .right-container .content h3, .upcoming .grid-container .right-container .content p {
+  font-family: "Roboto";
+}
+.upcoming .grid-container .right-container .content h3 {
+  margin: auto;
+  width: 40%;
+}
+.upcoming .grid-container .right-container .content p {
+  padding: 20px 0 70px 0;
+  color: rgb(148, 148, 148);
 }/*# sourceMappingURL=style.css.map */
