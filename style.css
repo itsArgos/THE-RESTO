@@ -553,4 +553,61 @@ header .header-link ul {
 .upcoming .grid-container .right-container .content p {
   padding: 20px 0 70px 0;
   color: rgb(148, 148, 148);
+}
+
+.footer {
+  margin-top: 500px;
+}
+.footer img {
+  width: 100%;
+  height: 500px;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer .newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer .newsletter .left-content {
+  background: black;
+  padding: 50px 50px 50px 250px;
+  width: 100%;
+}
+.footer .newsletter .left-content h2 {
+  font-family: "Allura";
+  color: rgb(197, 127, 41);
+  font-size: 1.8em;
+  font-weight: 400;
+}
+.footer .newsletter .left-content p {
+  color: white;
+}
+.footer .newsletter .right-content {
+  padding: 50px;
+}
+.footer .newsletter .right-content h3 {
+  text-transform: uppercase;
+  font-family: "Roboto";
+  color: white;
+}
+.footer .newsletter .right-content input {
+  background: none;
+  border: 1px solid rgb(148, 148, 148);
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+.footer .newsletter .right-content .follow-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+.footer .newsletter .right-content .follow-us i {
+  margin: 20px;
+  color: rgb(148, 148, 148);
 }/*# sourceMappingURL=style.css.map */
