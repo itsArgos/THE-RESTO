@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -556,19 +557,64 @@ header .header-link ul {
 }
 
 .footer {
-  margin-top: 500px;
+  position: relative;
+  margin-top: 220px;
 }
-.footer img {
+.footer .modal-CEO {
+  position: absolute;
+  top: -70px;
+  left: 20%;
+  width: 60%;
+  height: 100µ;
+  background: white;
+  text-align: center;
+  z-index: 10000;
+}
+.footer .modal-CEO .modal-content {
+  margin: 70px;
+}
+.footer .modal-CEO .modal-content .avatar {
+  position: absolute;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer .modal-CEO .modal-content .text-CEO {
+  font-family: "Roboto";
+  padding: 0 50px;
+  margin-bottom: 30px;
+  line-height: 2em;
+}
+.footer .modal-CEO .modal-content h3 {
+  font-family: "Roboto";
+  margin: 0;
+  font-size: 1.5em;
+}
+.footer .modal-CEO .modal-content .subtitle {
+  font-family: "Poppins";
+  color: rgb(197, 127, 41);
+  font-size: 0.8em;
+  margin-top: 15px;
+}
+.footer .map {
   width: 100%;
   height: 500px;
   -o-object-position: top;
      object-position: top;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
 }
 .footer .newsletter {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 .footer .newsletter .left-content {
   background: black;
@@ -583,6 +629,7 @@ header .header-link ul {
 }
 .footer .newsletter .left-content p {
   color: white;
+  line-height: 1.8;
 }
 .footer .newsletter .right-content {
   padding: 50px;
@@ -596,7 +643,7 @@ header .header-link ul {
   background: none;
   border: 1px solid rgb(148, 148, 148);
   padding: 5px 10px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .footer .newsletter .right-content .follow-us {
   display: -webkit-box;
@@ -610,4 +657,5 @@ header .header-link ul {
 .footer .newsletter .right-content .follow-us i {
   margin: 20px;
   color: rgb(148, 148, 148);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
