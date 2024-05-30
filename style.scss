@@ -9,6 +9,10 @@ $font-allura : "Allura";
 $font-poppins : "Poppins";
 $font-roboto : "Roboto";
 
+$small-camputer: 1600px;
+$tablet: 1450px;
+$small-tablet: 1080px;
+$mobile: 550px;
 
 * {
     box-sizing: border-box;
@@ -64,8 +68,20 @@ header {
     .header-navigation ul{
         font-family: $font-roboto;
         gap: 100px;
+
+        @media screen and (max-width: $small-camputer){
+            gap: 50px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            gap: 30px;
+        }
+
+        @media screen and (max-width: $small-tablet) {
+            display: none;
+        }
     }
-    
+
     .header-link ul{
         gap: 20px;
     }
@@ -82,6 +98,10 @@ header {
     
     .pre-title{
         font-size: 3.5em;
+
+        @media screen and (max-width: $small-tablet) {
+            font-size: 2em;
+        }
     }
     
     h2 {
@@ -90,11 +110,20 @@ header {
         font-size: 4em;
         letter-spacing: 10px;
         margin-top: -30px;
+
+        @media screen and (max-width: $small-tablet) {
+            font-size: 2em;
+            margin-top: 0px;
+        }
     }
     
     i {
         font-size: 1.5em;
         margin: 40px;
+
+        @media screen and (max-width: $small-tablet) {
+            font-size: 1em;
+        }
     }
     
     p:nth-child(4){
@@ -102,6 +131,15 @@ header {
         font-size: 1em;
         text-transform: uppercase;
         letter-spacing: 6px;
+
+        @media screen and (max-width: $small-tablet) {
+            font-size: 0.8em;
+        }
+
+        @media screen and (max-width: $small-tablet) {
+            text-align: center;
+            width: 85%;
+        }
     }
 }
 
@@ -110,6 +148,10 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgb(233, 233, 233);
+
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
     
     .our-store-left-content {
         margin: 20px;
@@ -124,18 +166,32 @@ header {
         
         .pre-title {
             font-size: 2.5em;
+            
+            @media screen and (max-width: $mobile) {
+                font-size: 1.8em;
+            }
         }
         
         h2 {
             text-transform: uppercase;
             margin-top: -15px;
             font-family: $font-poppins;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 1.2em;
+                margin-top: -10px;
+            }
         }
         
         i {
             font-size: 1.5em;
             margin: 50px;
             color: $grey-color;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 1em;
+                margin: 30px;
+            }
         }
         
         p:nth-child(4) {
@@ -148,10 +204,18 @@ header {
             border-radius: 50%;
             height: 100px;
             margin-bottom: 10px;
+
+            @media screen and (max-width: $mobile) {
+                height: 50px;
+            }
         }
         
         h3 {
             font-family: $font-poppins;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 1em;
+            }
         }
         
         p:nth-child(7) {
@@ -160,6 +224,11 @@ header {
             letter-spacing: -1px;
             color: $grey-color;
             margin-top: -5px;
+            
+            @media screen and (max-width: $mobile) {
+                font-size: 0.8em;
+                margin-top: -2px;
+            }
         }
     }
     
@@ -167,6 +236,10 @@ header {
         width: 100%;
         object-fit: cover;
         height: 550px;
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
     }
 }
 
@@ -182,28 +255,51 @@ header {
         align-items: center;
         padding: 70px 0 200px 0;
         background: $main-bg-color;
+
+        @media screen and (max-width: $mobile) {
+            height: 500px;
+        }
         
         h2 {
             font-family: $font-allura;
             color: $orange-color;
             font-size: 2.5em;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 2em;
+            }
         }
         
         i {
             font-size: 1.5em;
             margin: 30px;
             color: $grey-color;
+            
+            @media screen and (max-width: $mobile) {
+                font-size: 1.2em;
+            }
         }
         
         ul {
             display: flex;
+            justify-content: center;
             gap: 90px;
+            width: 100%;
             font-family: $font-roboto;
             color: white;
+
+            @media screen and (max-width: $mobile) {
+                gap: 30px;
+                padding: 0;
+            }
         }
         
         li {
             position: relative;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 0.8em;
+            }
             
             &::after {
                 content: "";
@@ -211,25 +307,37 @@ header {
                 bottom: -10px;
                 left: 0;
                 width: 100%;
+                border: 1px solid white;
                 border-radius: 5%;
             }
         }
     }
     
     .discover-bottom {
+        position: relative;
         background: url(./img/bg-menu-01.jpg) center/cover;
         height: 750px;
         
         .modal-meals {
             position: absolute;
-            top: 25%;
+            top: -150px;
             left: 27%;
-            width: 50%;
             background-color: $grey-bg-color;
+            
+            @media screen and (max-width: $mobile) {
+                top: -220px;
+                left: 4%;
+                width: 90%;
+                height: 850px;
+            }
             
             .meals {
                 display: grid;
                 grid-template-columns: 1fr 1fr ;
+                
+                @media screen and (max-width: $mobile) {
+                    grid-template-columns: 1fr ;
+                }
                 
                 .meals-content {
                     position: relative;
@@ -238,15 +346,33 @@ header {
                     gap: 10px;
                     font-family: $font-roboto;
                     margin: 45px;
+
+                    p {
+                        @media screen and (max-width: $mobile) {
+                            font-size: 0.8em;
+                        }
+                    }
+                    
+                    @media screen and (max-width: $mobile) {
+                        margin: 15px;
+                    }
                     
                     img {
                         border-radius: 50%;
+
+                        @media screen and (max-width: $mobile) {
+                            width: 70px;
+                        }
                     }
                     
                     h4 {
                         text-transform: uppercase;
                         font-size: 0.8em;
                         margin-bottom: 5px;
+
+                        @media screen and (max-width: $mobile) {
+                            font-size: 0.7em;
+                        }
                     }
                     
                     .price {
@@ -274,18 +400,28 @@ header {
 
 .reservation {
     margin-top: 80px;
+
+    @media screen and (max-width: $mobile) {
+        padding-bottom: 300px;
+    }
     
     .modal-reservation {
-        display: flex;
+        display: grid;
+        grid-template-columns: 35% 65%;
         margin: auto;
         width: 70%;
-        background-color: $grey-bg-color;
+        background-color: white;
+        
+        @media screen and (max-width: $mobile) {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 90%;
+        }
         
         .left-content {
             text-align: center;
             background: black;
             padding: 30px;
-            width: 40%;
             
             .content {
                 padding: 30px 40px;
@@ -342,11 +478,12 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60%;
+            
             
             .content {
                 text-align: center;
                 padding: 30px 0;
+                background-color: white;
                 
                 p:nth-child(1) {
                     color: $orange-color;
@@ -377,6 +514,13 @@ header {
                     align-items: center;
                     margin-bottom: 50px;
                     gap: 50px;
+
+                    @media screen and (max-width: $mobile) {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        margin: 0 50px;
+                        gap: 20px;
+                    }
                     
                     input, select, #select-option {
                         border: none;
@@ -396,6 +540,10 @@ header {
                     border: none;
                     border-radius: 50px;
                     cursor: pointer;
+
+                    @media screen and (max-width: $mobile) {
+                        margin-top: 20px;
+                    }
                 }
             }
         }
@@ -407,6 +555,10 @@ header {
 .upcoming {
     margin: 120px auto;
     width: 70%;
+
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
     
     .upcoming-title {
         display: flex;
@@ -526,6 +678,11 @@ header {
                 background: white;
                 height: 90%;
                 width: 90%;
+
+                .test {
+                    width: 100%;
+                    height: 100%;
+                }
                 
                 .date-content {
                     display: flex;
@@ -574,13 +731,24 @@ header {
         top: -70px;
         left: 20%;
         width: 60%;
-        height: 100µ;
         background: white;
         text-align: center;
         z-index: 10000;
 
+        @media screen and (max-width: $mobile) {
+            width: 90%;
+            top: -400px;
+            left: 5%;
+        }
+        
+
         .modal-content {
             margin: 70px;
+
+            @media screen and (max-width: $mobile) {
+                margin: 70px 0;
+                padding: 0 30px;
+            }
             
             .avatar {
                 position: absolute;
@@ -590,6 +758,10 @@ header {
                 border: none;
                 border-radius: 50%;
                 object-fit: cover;
+
+                @media screen and (max-width: $mobile) {
+                    left: 45%;
+                }
             }
             
             .text-CEO {
@@ -597,6 +769,10 @@ header {
                 padding: 0 50px;
                 margin-bottom: 30px;
                 line-height: 2em;
+
+                @media screen and (max-width: $mobile) {
+                    padding: 0;;
+                }
             }
             
             h3 {
@@ -625,13 +801,22 @@ header {
     .newsletter {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: -4px;
         filter: brightness(0.8);
+
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
         
         
         .left-content {
             background: black;
             padding: 50px 50px 50px 250px;
             width: 100%;
+
+            @media screen and (max-width: $mobile) {
+                display: none;
+            }
             
             h2 {
                 font-family: $font-allura;
@@ -649,10 +834,18 @@ header {
         .right-content {
             padding: 50px;
 
+            @media screen and (max-width: $mobile) {
+                padding-left: 30px;
+            }
+
             h3 {
                 text-transform: uppercase;
                 font-family: $font-roboto;
                 color: white;
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 1em;
+                }
             }
 
             input {
@@ -666,6 +859,11 @@ header {
                 display: flex;
                 align-items: center;
                 margin-top: 20px;
+                width: 100%;
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 0.8em;
+                }
 
                 i {
                     margin: 20px;
