@@ -55,6 +55,9 @@ header .header-navigation ul {
   font-family: "Roboto";
   gap: 100px;
 }
+header .header-navigation ul li {
+  cursor: pointer;
+}
 @media screen and (max-width: 1600px) {
   header .header-navigation ul {
     gap: 50px;
@@ -72,6 +75,9 @@ header .header-navigation ul {
 }
 header .header-link ul {
   gap: 20px;
+}
+header .header-link ul li {
+  cursor: pointer;
 }
 
 .hero-content {

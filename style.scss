@@ -64,10 +64,15 @@ header {
         display: flex;
         text-transform: uppercase;
     }
-    
+
     .header-navigation ul{
         font-family: $font-roboto;
         gap: 100px;
+
+        li {
+            cursor: pointer;
+        }
+
         
         @media screen and (max-width: $small-camputer){
             gap: 50px;
@@ -84,6 +89,10 @@ header {
     
     .header-link ul{
         gap: 20px;
+
+        li {
+            cursor: pointer;
+        }
     }
 }
 
