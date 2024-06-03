@@ -141,7 +141,7 @@ header .header-link ul {
   grid-template-columns: 1fr 1fr;
   background-color: rgb(233, 233, 233);
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .our-store {
     grid-template-columns: 1fr;
   }
@@ -235,7 +235,7 @@ header .header-link ul {
      object-fit: cover;
   height: 550px;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .our-store .our-store-right-content img {
     display: none;
   }
@@ -258,7 +258,7 @@ header .header-link ul {
   padding: 70px 0 200px 0;
   background: rgb(41, 41, 41);
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .discover-container .discover-top {
     height: 500px;
   }
@@ -295,7 +295,7 @@ header .header-link ul {
   font-family: "Roboto";
   color: white;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .discover-container .discover-top ul {
     gap: 30px;
     padding: 0;
@@ -325,23 +325,29 @@ header .header-link ul {
 }
 .discover-container .discover-bottom .modal-meals {
   position: absolute;
-  top: -150px;
-  left: 27%;
+  top: 33%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: rgb(233, 233, 233);
+}
+@media screen and (max-width: 1080px) {
+  .discover-container .discover-bottom .modal-meals {
+    height: 980px;
+    width: 70%;
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 550px) {
   .discover-container .discover-bottom .modal-meals {
-    top: -220px;
-    left: 4%;
     width: 90%;
-    height: 850px;
   }
 }
 .discover-container .discover-bottom .modal-meals .meals {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .discover-container .discover-bottom .modal-meals .meals {
     grid-template-columns: 1fr;
   }
@@ -358,12 +364,20 @@ header .header-link ul {
   font-family: "Roboto";
   margin: 45px;
 }
+@media screen and (max-width: 1080px) {
+  .discover-container .discover-bottom .modal-meals .meals .meals-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 20px;
+  }
+}
 @media screen and (max-width: 550px) {
   .discover-container .discover-bottom .modal-meals .meals .meals-content p {
     font-size: 0.8em;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .discover-container .discover-bottom .modal-meals .meals .meals-content {
     margin: 15px;
   }
@@ -371,7 +385,7 @@ header .header-link ul {
 .discover-container .discover-bottom .modal-meals .meals .meals-content img {
   border-radius: 50%;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .discover-container .discover-bottom .modal-meals .meals .meals-content img {
     width: 70px;
   }
@@ -408,17 +422,26 @@ header .header-link ul {
 .reservation {
   margin-top: 80px;
 }
-@media screen and (max-width: 550px) {
-  .reservation {
-    padding-bottom: 300px;
-  }
-}
 .reservation .modal-reservation {
   display: grid;
   grid-template-columns: 35% 65%;
   margin: auto;
   width: 70%;
   background-color: white;
+}
+@media screen and (max-width: 1450px) {
+  .reservation .modal-reservation {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .reservation .modal-reservation {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
 }
 @media screen and (max-width: 550px) {
   .reservation .modal-reservation {
@@ -516,10 +539,10 @@ header .header-link ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
+  margin: 0 30px 50px 30px;
   gap: 50px;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .reservation .modal-reservation .right-content form .form-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -544,7 +567,7 @@ header .header-link ul {
   border-radius: 50px;
   cursor: pointer;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1600px) {
   .reservation .modal-reservation .right-content form button {
     margin-top: 20px;
   }
@@ -554,7 +577,7 @@ header .header-link ul {
   margin: 120px auto;
   width: 70%;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .upcoming {
     display: none;
   }
@@ -594,6 +617,11 @@ header .header-link ul {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+@media screen and (max-width: 1450px) {
+  .upcoming .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
 .upcoming .grid-container button {
   border: none;
   background: none;
@@ -624,8 +652,10 @@ header .header-link ul {
 .upcoming .grid-container .left-container .content .image-container::after {
   content: "08 July";
   position: absolute;
-  top: 25%;
-  left: 33%;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
   width: 100px;
   height: 100px;
   background: rgb(41, 41, 41);
@@ -692,17 +722,14 @@ header .header-link ul {
           align-items: center;
   background: url(./img/event-03.jpg) center/cover;
 }
-.upcoming .grid-container .right-container .content {
+.upcoming .grid-container .right-container .container {
   text-align: center;
   background: white;
   height: 90%;
   width: 90%;
+  padding: 0 50px 50px 50px;
 }
-.upcoming .grid-container .right-container .content .test {
-  width: 100%;
-  height: 100%;
-}
-.upcoming .grid-container .right-container .content .date-content {
+.upcoming .grid-container .right-container .container .date-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,19 +748,22 @@ header .header-link ul {
   background: rgb(41, 41, 41);
   font-family: "Poppins";
 }
-.upcoming .grid-container .right-container .content .date-content h5 {
+.upcoming .grid-container .right-container .container .date-content h5 {
   font-size: 1.2em;
 }
-.upcoming .grid-container .right-container .content h3, .upcoming .grid-container .right-container .content p {
+.upcoming .grid-container .right-container .container h3, .upcoming .grid-container .right-container .container p {
   font-family: "Roboto";
 }
-.upcoming .grid-container .right-container .content h3 {
+.upcoming .grid-container .right-container .container h3 {
+  text-align: center;
   margin: auto;
-  width: 40%;
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.upcoming .grid-container .right-container .content p {
-  padding: 20px 0 70px 0;
+.upcoming .grid-container .right-container .container p {
   color: rgb(148, 148, 148);
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -742,8 +772,10 @@ header .header-link ul {
 }
 .footer .modal-CEO {
   position: absolute;
-  top: -70px;
-  left: 20%;
+  top: -250px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
   width: 60%;
   background: white;
   text-align: center;
@@ -753,32 +785,34 @@ header .header-link ul {
   .footer .modal-CEO {
     width: 90%;
     top: -400px;
-    left: 5%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .footer .modal-CEO {
+    width: 90%;
   }
 }
 .footer .modal-CEO .modal-content {
+  position: relative;
   margin: 70px;
 }
 @media screen and (max-width: 550px) {
   .footer .modal-CEO .modal-content {
-    margin: 70px 0;
-    padding: 0 30px;
+    margin: 70px 20px;
   }
 }
 .footer .modal-CEO .modal-content .avatar {
   position: absolute;
-  top: -25px;
+  top: -70px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
   border: none;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media screen and (max-width: 550px) {
-  .footer .modal-CEO .modal-content .avatar {
-    left: 45%;
-  }
 }
 .footer .modal-CEO .modal-content .text-CEO {
   font-family: "Roboto";
@@ -829,7 +863,7 @@ header .header-link ul {
   padding: 50px 50px 50px 250px;
   width: 100%;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1080px) {
   .footer .newsletter .left-content {
     display: none;
   }
